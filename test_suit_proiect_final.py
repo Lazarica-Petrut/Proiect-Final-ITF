@@ -17,7 +17,8 @@ class TestingClass(unittest.TestCase):
         my_test_runnner = HTMLTestRunner(
             output = "report",
             title = "Test report",
-            report_name = "report"
+            report_name = "report",
+            tested_by = "Lazarica Petrut"
         )
 
         my_test_runnner.run(my_test_suit)
