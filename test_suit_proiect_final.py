@@ -1,11 +1,11 @@
 import unittest
-import HtmlTestRunner
 
+from HTMLTestRunner.runner import HTMLTestRunner
 from sauce_demo_test import SauceDemoTestCase
 from selenium_site_test import SeleniumEasyTest
 
 
-class ClassaDeTest(unittest.TestCase):
+class TestingClass(unittest.TestCase):
 
     def test_suit(self):
         my_test_suit = unittest.TestSuite()
@@ -14,9 +14,10 @@ class ClassaDeTest(unittest.TestCase):
             unittest.defaultTestLoader.loadTestsFromTestCase(SeleniumEasyTest)
         ])
 
-        test_runnner = HtmlTestRunner.HTMLTestRunner(
-            report_title="Raport Proiect Final",
-            report_name="Test Proiect Final"
+        my_test_runnner = HTMLTestRunner(
+            output = "report",
+            title = "Test report",
+            report_name = "report"
         )
 
-        test_runnner.run(my_test_suit)
+        my_test_runnner.run(my_test_suit)
