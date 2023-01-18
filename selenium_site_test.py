@@ -18,6 +18,8 @@ class SeleniumEasyTest(unittest.TestCase):
         self.driver.implicitly_wait(10)
         self.driver.get("https://demo.seleniumeasy.com/")
 
+# Functions ----------------------------------------------------------------------------
+
     # Finds and clicks the Input Form dropdown
     def click_input_form_dropdown(self):
         click_input_forms = self.driver.find_element(By.XPATH, "//a[@class='dropdown-toggle'][normalize-space()='Input Forms']")
@@ -27,6 +29,8 @@ class SeleniumEasyTest(unittest.TestCase):
     def click_simple_form_demo_button(self):
         click_simple_form = self.driver.find_element(By.XPATH, "//*[@id='navbar-brand-centered']/ul[1]/li[1]/ul/li[1]/a")
         click_simple_form.click()
+
+# Tests --------------------------------------------------------------------------------
 
     # Tests the Basic Form single input field
     def test_basic_form(self):

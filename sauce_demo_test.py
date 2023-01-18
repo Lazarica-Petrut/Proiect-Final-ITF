@@ -17,6 +17,8 @@ class SauceDemoTestCase(unittest.TestCase):
         self.driver.implicitly_wait(10)
         self.driver.get("https://www.saucedemo.com/")
 
+# Functions ----------------------------------------------------------------------------
+
     # Finds the login form elements, inserts the credentials and clicks the button
     def log_in(self):
         inserting_username = self.driver.find_element(By.ID, "user-name")
@@ -53,6 +55,8 @@ class SauceDemoTestCase(unittest.TestCase):
         enter_zipcode.send_keys("007")
         click_continue_button = self.driver.find_element(By.ID, "continue")
         click_continue_button.click()
+
+# Tests --------------------------------------------------------------------------------
 
     # Tests the login function of the site
     def test_sauce_demo_login(self):
